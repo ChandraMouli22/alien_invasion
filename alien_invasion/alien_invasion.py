@@ -3,6 +3,13 @@ from pygame import mixer
 from pygame.locals import *
 import random
 import pygame.locals
+import os
+os.environ["SDL_AUDIODRIVER"] = "dummy"
+
+#import pygame
+pygame.mixer.pre_init(44100, -16, 2, 512)
+pygame.mixer.init()
+pygame.init()
 
 
 pygame.mixer.pre_init(44100,-16,2,512 )
